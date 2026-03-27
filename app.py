@@ -13,6 +13,12 @@ rf = joblib.load("rf_imdb.pkl")
 with open("model_accuracies.json", "r") as f:
     accuracies = json.load(f)
 
+st.set_page_config(
+    page_title="IMDb Movie Review Sentiment Analyzer",
+    page_icon="🎬",
+    layout="centered"
+)
+
 st.title("🎬 IMDb Movie Review Sentiment Analyzer")
 
 review = st.text_area("Enter your movie review:")
